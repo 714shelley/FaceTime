@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>元素点击弹出序号</title>
+  <link href="" rel="stylesheet">
+</head>
+<body>
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+</ul>
+<script>
+  // 绑定点击事件
+  function bindEvent() {
+    var liArray = document.getElementsByTagName("li");
+    for (var i = 0; i < liArray.length; i++) {
+      liArray[i].onclick = function () {
+        alert(i);
+      }
+    }
+  }
+
+  window.onload = function () {
+    bindEvent();
+  }
+</script>
+</body>
+</html>
